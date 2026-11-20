@@ -1,0 +1,87 @@
+package app.shining.order.domain.repository
+
+import android.util.Log
+import app.shining.domain.network.SamadResponse
+import app.shining.order.api.OrderApi
+import app.shining.order.api.dto.reserve.ReserveProgramDto
+import app.shining.order.api.dto.self.SelfDto
+import app.shining.order.domain.model.ReserveRequestBodyData
+import kotlinx.serialization.json.Json
+import retrofit2.HttpException
+
+class OrderFoodRepositoryImplementation(
+    private val api: OrderApi,
+    private val json: Json,
+) : OrderFoodRepository {
+
+    override suspend fun reserveFood(
+        reserveRequestBodyData: ReserveRequestBodyData,
+        programId: Int
+    ): Result<String> {
+        return try {
+            val response = api.reserveFood(
+                programId = programId,
+                reservableFoodDetail = reserveRequestBodyData
+            )
+            if (response.isSuccessful) {
+                Result.success(response.messageFa ?: "عملیات رزرو با موفقیت انجام شد")
+            } else {
+                Result.failure(Throwable(response.getErrorMessage()))
+            }
+        } catch (e: HttpException) {
+            Log.e("OrderFoodRepository", "reserveFood: ${e.message}")
+            if (e.code() == 400) {
+                val errorBody = e.response()?.errorBody()?.string()
+                if (errorBody != null) {
+                    val error = json.decodeFromString<SamadResponse<Unit>>(errorBody)
+                    Result.failure(Throwable(error.getErrorMessage()))
+                } else {
+                    Result.failure(e)
+                }
+            } else {
+                Result.failure(e)
+            }
+        } catch (e: Exception) {
+            Log.e("OrderFoodRepository", "reserveFood: ${e.message}")
+            Result.failure(Throwable("در ارتباط با سرور به مشکل خوردیم."))
+        }
+    }
+
+    override suspend fun getReserveProgram(
+        selfId: Int,
+        weekStartDate: String,
+    ): Result<ReserveProgramDto> {
+        return try {
+            val response = api.getReserveProgram(
+                selfId = selfId,
+                date = weekStartDate
+            )
+            if (response.isSuccessful) {
+                Result.success(response.payload!!)
+            } else {
+                Result.failure(Throwable(response.getErrorMessage()))
+            }
+        } catch (e: Exception) {
+            Log.e("OrderFoodRepository:getReservableProgram", "Error ${e.message}")
+            Result.failure(Throwable("در گرفتن برنامه غذایی خطایی پیش آمده."))
+        }
+
+    }
+
+    override suspend fun getAvailableSelfs(
+    ): Result<List<SelfDto>> {
+        return try {
+            val response = api.getAvailableSelfs()
+
+            return if (response.isSuccessful) {
+                Result.success(response.payload!!)
+            } else {
+                Result.failure(Throwable(response.getErrorMessage()))
+            }
+        } catch (e: Exception) {
+            Log.e("OrderFoodRepository:getAvailableSelfs", "Error ${e.message}")
+            Result.failure(Throwable("هیچ سلفی برای شما تعریف نشده."))
+        }
+    }
+
+}

@@ -1,0 +1,38 @@
+[Unit]
+Description=Shining next-week menu watcher (shining-api.nisatech.org)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=shining
+Group=shining
+UMask=0007
+WorkingDirectory=/srv/shining
+# Port 8060, picked to stay clear of other services on the same machine.
+Environment=SHINING_HOST=127.0.0.1 SHINING_PORT=8060 SHINING_DATA_DIR=/srv/shining/data
+# The server has 1 CPU and ~1 GB RAM shared with other sites: a small heap, the light
+# collector, and only the quick JIT tier. The watcher is idle almost all the time.
+Environment="JAVA_OPTS=-Xmx128m -Xss512k -XX:MaxMetaspaceSize=96m -XX:ReservedCodeCacheSize=32m -XX:TieredStopAtLevel=1 -XX:+UseSerialGC -XX:+ExitOnOutOfMemoryError"
+# SAMAD_USERNAME, SAMAD_PASSWORD, SHINING_FCM_KEY_FILE, SHINING_DEBUG_TOKEN (and optionally
+# SHINING_LOG_LEVEL), written by deploy/set-secrets.sh. Never in the repo.
+EnvironmentFile=/srv/shining/secrets/shining.env
+# deploy/remote-deploy.sh points current/ at the newest release.
+ExecStart=/srv/shining/current/bin/shining-server run
+Restart=always
+RestartSec=5
+
+# The service only ever writes its state and logs.
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/srv/shining/data
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+MemoryMax=300M
+
+[Install]
+WantedBy=multi-user.target
