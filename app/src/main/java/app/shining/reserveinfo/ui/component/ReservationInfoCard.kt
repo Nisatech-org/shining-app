@@ -1,0 +1,58 @@
+package app.shining.reserveinfo.ui.component
+
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import app.shining.domain.ui.component.ShiningCard
+import app.shining.domain.ui.component.ShiningDivider
+import app.shining.domain.ui.theme.ShiningTheme
+import app.shining.reserveinfo.ui.fixture.reserveInfoCardUIModelFixture
+import app.shining.reserveinfo.ui.model.ReservationInfoCardUIModel
+
+/** One day of reservations: the day and its date, then the meal reserved for it. */
+@Composable
+fun ReservationInfoCard(
+    data: ReservationInfoCardUIModel,
+    onGetForgetCodeClick: (Int, () -> Unit) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    ShiningCard(modifier = modifier, contentPadding = PaddingValues(0.dp)) {
+        Row(
+            modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 14.dp, bottom = 12.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Text(
+                text = data.farsiDayName,
+                style = ShiningTheme.typography.title,
+                color = ShiningTheme.colors.ink,
+                modifier = Modifier.weight(1f),
+            )
+            Text(
+                text = data.farsiDate,
+                style = ShiningTheme.typography.caption,
+                color = ShiningTheme.colors.inkSecondary,
+            )
+        }
+        data.mealRowUIModelList.forEach { meal ->
+            ShiningDivider()
+            MealRow(data = meal, onGetForgetCodeClick = onGetForgetCodeClick)
+        }
+    }
+}
+
+@Preview
+@Composable
+private fun ReservationInfoCardPreview() {
+    ShiningTheme {
+        ReservationInfoCard(
+            data = reserveInfoCardUIModelFixture,
+            onGetForgetCodeClick = { _, _ -> }
+        )
+    }
+}
