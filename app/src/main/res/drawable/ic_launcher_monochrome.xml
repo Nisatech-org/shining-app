@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Themed icons (Android 13+) tint this layer, so the 🍟 shows as a silhouette. -->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/logo_fries"
+    android:inset="25%" />
