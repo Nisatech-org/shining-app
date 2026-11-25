@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Samad's certificate chains up to "Certum Trusted Root CA", which Android only trusts from
+    Android 14. On older phones every request failed before reaching Samad, so the app bundles
+    that root and trusts it for Samad's host only. The copy in res/raw is Android 14's own
+    (system/ca-certificates f8fc53da.0, SHA-256 FE:76:96:57:...:E1:AE:78:FD).
+-->
+<network-security-config>
+    <domain-config>
+        <domain includeSubdomains="false">setad.dining.sharif.edu</domain>
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="@raw/certum_trusted_root_ca" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>
