@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: A problem with a market trade (مشکل در معامله‌ی بازار)
+    url: https://github.com/Nisatech-org/shining-app/blob/main/.github/SUPPORT.md#a-problem-with-a-market-trade
+    about: Tap «مشکل دارم» on the trade in the app. The team can see the trade there; a GitHub issue can't.
+  - name: A security problem (مشکل امنیتی)
+    url: https://github.com/Nisatech-org/shining-app/blob/main/.github/SECURITY.md
+    about: Please email us privately instead of opening a public issue.
