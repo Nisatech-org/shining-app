@@ -1,0 +1,25 @@
+name: Feature request (پیشنهاد قابلیت)
+description: An idea that would make Shining better.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for the idea! Persian or English is fine. Please search the [existing issues](https://github.com/Nisatech-org/shining-app/issues) first.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's the problem? (مشکل چیست؟)
+      description: What are you trying to do, and what makes it hard today?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea (پیشنهاد شما)
+      description: What should Shining do? A sketch or a screenshot of another app helps.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Other ways you've thought of (راه‌های دیگر)

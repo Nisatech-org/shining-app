@@ -1,0 +1,188 @@
+<resources>
+    <string name="app_name">Shining</string>
+    <string name="retry">تلاش مجدد</string>
+    <string name="network_connection_error">اینترنت گوشیت روشنه؟</string>
+
+    <!-- GENERAL -->
+    <string name="student_number">شماره دانشجویی</string>
+    <string name="password">رمز عبور</string>
+
+    <!-- DATE & TIME -->
+    <string name="persian_day_of_week_saturday">شنبه</string>
+    <string name="persian_day_of_week_sunday">یکشنبه</string>
+    <string name="persian_day_of_week_monday">دوشنبه</string>
+    <string name="persian_day_of_week_tuesday">سه‌شنبه</string>
+    <string name="persian_day_of_week_wednesday">چهارشنبه</string>
+    <string name="persian_day_of_week_thursday">پنجشنبه</string>
+    <string name="persian_day_of_week_friday">جمعه</string>
+
+    <!-- SPLASH -->
+    <string name="splash_screen_caption">رزرو غذای سامانه سماد</string>
+
+    <!-- LOGIN -->
+    <string name="login_login_button_label">ورود</string>
+    <string name="login_guest_button_label">ورود مهمان (فقط بازار)</string>
+    <string name="login_guest_note">شماره‌ی دانشجویی یا رمز سماد نداری؟ بدون حساب سماد وارد بازار شو: غذا بخر، یا کد غذات رو بنویس و بفروش.</string>
+    <string name="login_screen_title_bar">رزرو غذای شریف</string>
+    <string name="login_title">با حساب سامانه سماد وارد شو</string>
+
+    <!-- RESERVATION INFO -->
+    <string name="reservation_info_screen_title">رزروهای من</string>
+    <string name="reservation_info_screen_failed">زارت!</string>
+    <string name="reservation_info_screen_no_data">غذای رزروی ندارید</string>
+
+    <!-- NURTURE PROFILE -->
+    <string name="nurture_profile_row_item_name">نام</string>
+    <string name="nurture_profile_row_item_usrname">نام کاربری</string>
+    <string name="nurture_profile_row_item_credit">اعتبار</string>
+    <string name="nurture_profile_row_item_transactions">تراکنش‌ها</string>
+    <string name="nurture_profile_titlebar_name">پروفایل</string>
+
+    <!-- Order -->
+    <string name="order_screen_title_bar">رزرو غذا</string>
+    <string name="order_order_food_detail_disabled">مهلت رزرو تموم شده</string>
+    <string name="increase_credit_button_label">افزایش اعتبار</string>
+    <string name="order_order_food_detail_selected">رزرو کردی</string>
+    <!-- A food whose meal isn't reserved, on a day already reserved at another self (Samad wants one self a day). -->
+    <string name="order_order_food_detail_selected_elsewhere">این روز جای دیگه رزرو داری</string>
+    <string name="order_order_food_detail_not_selected">قابل رزرو</string>
+    <string name="order_order_food_detail_cancel">حذف رزرو</string>
+    <string name="order_order_food_detail_reserve">رزرو غذا</string>
+
+    <!-- Forget Code -->
+    <string name="forget_code_api_error">"در دریافت کد فراموشی غذای مورد نظر خطایی پیش اومده"</string>
+    <string name="get_forget_code_button_label">دریافت کد فراموشی</string>
+
+    <!-- Notifications -->
+    <string name="notification_title">یادآوری رزرو</string>
+    <string name="notification_content">غذای هفته بعد رو رزرو کردی؟</string>
+    <string name="notification_remember_to_reserve_1">ساقیا یک جرعه‌ای زان آبِ آتش‌گون که من / در میانِ پُختگانِ عشقِ او خامم هنوز</string>
+    <string name="notification_remember_to_reserve_2">در آن قضیه که با ما به صلح باشد دوست / اگر جهان همه دشمن شود چه غم دارم؟</string>
+    <string name="notification_remember_to_reserve_3">من بنده آن دمم که ساقی گوید / یک جام دگر بگیر و من نتوانم</string>
+    <string name="notification_remember_to_reserve_4">مراد ما وصال توست از دنیا و از عقبی / وگرنه بی‌شما قدری ندارد دین و دنیا را</string>
+    <string name="notification_remember_to_reserve_5">من غير دل نمانده برايم در اين بساط / آسي بكش كه باز ببازم قمار را</string>
+    <string name="notification_remember_to_reserve_6">لبخند کن معاوضه با جان شهریار / تا من به شوق این دهم و آن ستانمت</string>
+    <string name="notification_remember_to_reserve_7">در ذهنم‌ ای چهره‌ات بهترین یادگاری! / زیبا‌ترین شعرم ارزانی‌ات باد امشب</string>
+    <string name="notification_remember_to_reserve_8">اول کنم اندیشه‌ای تا برگزینم پیشه‌ای / آخر به یک پیمانه می اندیشه را باطل کنم</string>
+    <string name="notification_remember_to_reserve_9">پیر دُردی‌کَش ما گرچه ندارد زر و زور / خوش عطابخش و خطاپوش خدایی دارد</string>
+    <string name="notification_remember_to_reserve_10">با همه نسیان تو گویی کز پی آزار من / خاطرم با خاطرات خود تبانی میکند</string>
+    <string name="notification_remember_to_reserve_11">همه کس طالبِ یارند چه هشیار و چه مست / همه جا خانهٔ عشق است چه مسجد چه کِنِشت</string>
+    <string name="notification_remember_to_reserve_12">مژه سوزن رفو کن نخ او ز تار مو کن / که هنوز وصلهٔ دل دو سه بخیه کار دارد</string>
+    <string name="notification_remember_to_reserve_13">روزی که جان فدا کنمت باورت شود  / دردا که جز به مرگ نسنجند قدر مرد!</string>
+    <string name="notification_remember_to_reserve_14">بر بخارِ پنجره یک شب نوشتی: عاشقم / خون انگشتم بر آجر حک کنم: ما بیشتر</string>
+    <string name="notification_remember_to_reserve_15">خزانِ سوخته‌ام پرشد از شکوهِ شکوفه / هزارشکر که پای تو باز شد به جهانم</string>
+    <string name="notification_remember_to_reserve_16">مهمان توام چند صباحی دگر ای عمر! / اینقدر میازار من سوخته‌جان را</string>
+    <string name="notification_remember_to_reserve_17">هیچ ذوقی به ازین نیست که: از غایت شوق / چشم من گرید و لب‌های تو در خنده شوند!</string>
+
+    <!-- Daily Sell -->
+    <string name="daily_sell_no_program_found">برنامه روزفروشی تعریف نشده</string>
+    <string name="daily_sell_screen_title">روز فروش</string>
+
+    <!-- Settings -->
+    <string name="settings_notification_toggle_title">یادآوری رزرو غذا</string>
+    <string name="settings_screen_title">تنظیمات</string>
+
+    <!-- About Us -->
+    <string name="about_us_text">شاینینگ یک کلاینت مستقل و متن‌باز برای سامانه رزرو غذای سماد دانشگاه شریفه که رزرو غذا رو به سادگی چند لمس می‌کنه.\nامیدواریم غذاتون همیشه رزرو باشه و صف‌ها براتون کوتاه.</string>
+    <string name="about_us_question_1">کد این نرم افزار اوپن سورسه؟</string>
+    <string name="about_us_question_2">شاینینگ چطور کار می‌کنه؟</string>
+    <string name="about_us_question_3">چطوری اعتماد کنم؟ (توهم توطئه دارم)</string>
+    <string name="about_us_question_5">چطور می‌تونم باگ‌ها رو گزارش بدم یا پیشنهاد بدم؟</string>
+    <string name="about_us_answer_1">بله، با دکمه زیر به کد‌ها دسترسی دارید.</string>
+    <string name="about_us_answer_2">اطلاعات ورود و رزروهات فقط روی گوشی خودت می‌مونه و برنامه برای رزرو مستقیم با سرورهای سماد حرف می‌زنه؛ کسی این وسط رمز و داده‌هات رو نمی‌بینه. یک سرور نیساتک فقط زمان انتشار منوهای هفته بعد رو زیر نظر داره و اعلانش رو می‌فرسته، و هیچ اطلاعاتی از تو یا حسابت به اون سرور نمی‌رسه. اگر داده‌های برنامه رو پاک کنی، چیزهایی که فقط توی خود برنامه ذخیره شده بودن پاک می‌شن.</string>
+    <string name="about_us_answer_3">کدها رو بخونید.</string>
+    <string name="about_us_answer_5">از دکمه پایین، مشکل یا پیشنهادتون رو در صفحه گیت‌هاب پروژه ثبت کنید.</string>
+    <string name="about_us_title">درباره شاینینگ</string>
+    <string name="about_us_send_feedback">گزارش مشکل یا پیشنهاد</string>
+    <string name="about_us_button">درباره</string>
+
+    <!-- Settings -->
+    <string name="settings_button_title">تنظیمات</string>
+    <string name="settings_logout_button_label">خروج از این حساب</string>
+    <string name="settings_button_label">تنظیمات</string>
+    <string name="code_github_address">Nisatech-org/shining-app</string>
+
+    <!-- Accounts -->
+    <string name="accounts_title">حساب‌ها</string>
+    <string name="accounts_add">افزودن حساب</string>
+    <string name="accounts_limit_reached">حداکثر ۵ حساب می‌تونی داشته باشی.</string>
+    <string name="accounts_active">فعال</string>
+    <string name="accounts_needs_login">نیاز به ورود دوباره</string>
+    <string name="accounts_login_again">ورود دوباره</string>
+    <string name="accounts_remove">حذف</string>
+    <string name="accounts_reorder_hint">برای جابه‌جایی، روی حساب نگه دار و بکش.</string>
+    <string name="accounts_waiting_for_reserve">در حال رزرو… بعد از اتمام، حساب عوض می‌شه.</string>
+    <string name="accounts_switching">در حال ورود به حساب %1$s…</string>
+    <string name="accounts_remove_title">حذف حساب</string>
+    <string name="accounts_remove_message">حساب %1$s از این گوشی حذف می‌شه. رزروهای ثبت‌شده در سامانه دست نمی‌خورن.</string>
+    <string name="accounts_remove_confirm">حذف کن</string>
+    <string name="accounts_cancel">انصراف</string>
+    <string name="login_title_add_account">یک حساب سماد دیگه اضافه کن</string>
+    <string name="login_title_reauth">رمز عبور این حساب رو دوباره وارد کن</string>
+
+    <!-- Shining -->
+    <string name="back">بازگشت</string>
+    <string name="refresh">به‌روزرسانی</string>
+    <string name="show_all">نمایش همه</string>
+    <string name="show_less">نمایش کمتر</string>
+    <string name="show_password">نمایش رمز</string>
+    <string name="hide_password">پنهان کردن رمز</string>
+    <string name="network_connection_error_hint">اتصال اینترنت رو بررسی کن و دوباره امتحان کن.</string>
+
+    <string name="home_hello">سلام 👋</string>
+    <string name="home_hello_name">سلام، %1$s 👋</string>
+    <string name="home_subtitle">رزروهای این هفته‌ات یک‌جا</string>
+
+    <string name="reservation_info_screen_no_data_hint">هنوز غذایی برای این هفته رزرو نکردی.</string>
+    <string name="reservation_consumed">مصرف شده</string>
+    <string name="forget_code_short">کد فراموشی</string>
+    <string name="forget_code_copy">کپی کد</string>
+    <string name="forget_code_copied">کد فراموشی کپی شد</string>
+
+    <string name="order_screen_subtitle">غذای هفته رو انتخاب کن</string>
+    <string name="order_options_count">%1$s گزینه</string>
+    <string name="order_empty_title">برنامه غذایی پیدا نشد</string>
+    <string name="order_empty_subtitle">هنوز برنامه‌ای برای این هفته و هفته بعد تعریف نشده.</string>
+
+    <string name="daily_sell_screen_subtitle">غذاهای قابل خرید امروز</string>
+    <string name="daily_sell_no_program_hint">وقتی روزفروش فعال بشه، غذاها اینجا نشون داده می‌شن.</string>
+    <string name="daily_sell_time_range">%1$s تا %2$s</string>
+    <string name="daily_sell_sold">فروخته شده</string>
+    <string name="daily_sell_sold_of">%1$s از %2$s</string>
+    <string name="daily_sell_order">سفارش غذا</string>
+    <string name="daily_sell_sold_out">تمام شد</string>
+
+    <string name="profile_subtitle">حساب و اعتبار</string>
+    <string name="profile_credit_title">اعتبار</string>
+    <string name="profile_transaction_in">افزایش اعتبار</string>
+    <string name="profile_transaction_out">برداشت</string>
+
+    <string name="settings_group_notifications">اعلان‌ها</string>
+    <string name="settings_group_about">درباره</string>
+    <string name="settings_notification_toggle_subtitle">یادآوری برای رزرو غذای هفته بعد</string>
+    <string name="settings_source_title">کد منبع</string>
+    <string name="settings_version">نسخه %1$s</string>
+
+    <string name="login_welcome">به شاینینگ خوش اومدی</string>
+    <string name="login_username_placeholder">مثلاً ۴۰۱۱۰۰۰۰۰</string>
+    <string name="login_password_placeholder">رمز سامانه سماد</string>
+    <string name="login_captcha">کد امنیتی</string>
+    <string name="login_captcha_placeholder">حروف توی تصویر</string>
+    <string name="login_captcha_retry">تلاش دوباره</string>
+    <string name="login_captcha_new">کد امنیتی تازه</string>
+    <string name="login_privacy_note">اطلاعاتت فقط روی همین گوشی ذخیره می‌شه</string>
+
+    <!-- Push: next-week menu alerts -->
+    <string name="push_channel_menus">منوی هفته بعد</string>
+    <string name="push_channel_admin">هشدارهای سرور</string>
+    <string name="push_channel_market">بازار: معامله‌ها</string>
+    <string name="push_admin_title">سرور شاینینگ</string>
+    <string name="settings_admin_alerts_on">هشدارهای سرور روشن شد</string>
+    <string name="settings_admin_alerts_off">هشدارهای سرور خاموش شد</string>
+    <string name="settings_group_menu_alerts">اعلان منوی هفته بعد</string>
+    <string name="settings_menu_alerts_hint">وقتی منوی هفته بعدِ هر کدوم اومد، خبرت می‌کنیم.</string>
+    <string name="settings_menu_alerts_own">سلف‌های دیگه‌ی خودت (مثلاً خوابگاه)</string>
+    <string name="home_menu_status_title">منوی هفته بعد</string>
+    <string name="order_food_new">تازه</string>
+
+</resources>
